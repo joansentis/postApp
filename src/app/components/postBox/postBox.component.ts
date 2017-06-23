@@ -19,7 +19,7 @@ export class postBoxComponent {
     placeholderText: 'Write your post here...',
     charCounterCount: false,
     toolbarInline: true,
-    toolbarButtons: ['bold', 'italic', 'underline']
+    toolbarButtons: ['bold', 'italic', 'underline', 'fontSize']
   };
 
   constructor(private eRef: ElementRef) { }

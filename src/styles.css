@@ -18,13 +18,6 @@ strong {
     font-family: 'Montserrat', sans-serif;
 }
 
-
-/* to hide fr-toolbar buttons (the config param is not working properly) */
-
-.fr-toolbar #undo-1,
-.fr-toolbar #redo-1,
-.fr-toolbar #insertLink-1,
-.fr-toolbar #insertImage-1,
 .fr-quick-insert {
     display: none !important;
 }
