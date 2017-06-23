@@ -1,0 +1,60 @@
+@import '../..//variables.scss';
+@import '../../mixins.scss';
+.post-card {
+    @include container;
+    margin-top: 3em;
+    .post-container {
+        background: $white;
+        width: 100%;
+        box-shadow: $post-shadow;
+        padding: .6em 1.6em;
+        margin-bottom: 1em;
+        .user-info {
+            padding: 10px 0 0;
+            .user-img {
+                font-size: 2em;
+                color: $primary-color;
+            }
+            .user-name {
+                margin-left: 10px;
+                vertical-align: super;
+                color: $primary-color;
+            }
+        }
+        .comment-actions {
+            display: flex;
+            margin-bottom: 12px;
+            span {
+                font-size: 12px;
+                margin-right: 6px;
+                color: $primary-color;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }            
+        }
+        .comment-message {
+            border-top: $separator;            
+        }
+        .comment {
+            border-top: $separator;
+            .fr-box {
+                background: #fff;
+                padding: 1px 12px;
+                border: $border-editor;
+                border-radius: 4px;
+                margin-top: 12px;
+            }
+            .add-comment {
+                width: 100%;
+                text-align: right;
+                margin: 16px 0 10px;
+                button {
+                    @include button;
+                    padding: 6px 12px;
+                }
+            }
+        }
+    }
+}

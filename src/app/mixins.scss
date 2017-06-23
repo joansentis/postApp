@@ -1,0 +1,14 @@
+@mixin container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+@mixin button {
+    color: #6E899A;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 14px;
+    outline: 0;
+}

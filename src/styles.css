@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+*,
+ :after,
+ :before {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+strong {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* to hide fr-toolbar buttons (the config param is not working properly) */
+
+.fr-toolbar #undo-1,
+.fr-toolbar #redo-1,
+.fr-toolbar #insertLink-1,
+.fr-toolbar #insertImage-1,
+.fr-quick-insert {
+    display: none !important;
+}

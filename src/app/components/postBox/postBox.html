@@ -1,0 +1,9 @@
+<div class="post-box">
+    <div class="post-container" #postContainer (click)="!expandEditor && expandBox()" [ngClass]="{'expanded':expandEditor}">
+        <div class="user-info">
+            <i class="fa fa-user-circle user-img" aria-hidden="true"></i><span class="user-name">Name Surname</span>
+        </div>
+        <div [froalaEditor]="froalaConfig" [(froalaModel)]="postMessage"></div>
+        <button class="publish-message" *ngIf="expandEditor" (click)="publishAPost(postMessage)">Publish</button>
+    </div>
+</div>

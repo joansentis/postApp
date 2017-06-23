@@ -1,0 +1,37 @@
+@import '../..//variables.scss';
+@import '../../mixins.scss';
+.posts-list-container {
+    @include container;
+    height: 100%;
+    min-height: 100vh;
+    background: $bg-color;
+    padding: 2em 0 3em;
+    .posts-list-content {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 1200px) {
+    .posts-list-container {
+        .posts-list-content {
+            width: 60%;
+        }    
+    }
+}
+
+@media(max-width: 900px) {
+    .posts-list-container {
+        .posts-list-content {
+            width: 75%;
+        }    
+    }
+}
+
+@media(max-width: 600px) {
+    .posts-list-container {
+        .posts-list-content {
+            width: 90%;
+        }    
+    }
+}

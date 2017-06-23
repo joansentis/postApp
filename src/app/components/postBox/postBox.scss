@@ -1,0 +1,40 @@
+@import '../..//variables.scss';
+@import '../../mixins.scss';
+.post-box {
+    @include container;
+    .post-container {
+        background: $white;
+        width: 100%;
+        box-shadow: $post-shadow;
+        padding: 0 1.2em;
+        min-height: 140px;
+        .user-info {
+            padding: 10px 0 0;
+            .user-img {
+                font-size: 2em;
+                color: $primary-color;
+            }
+            .user-name {
+                margin-left: 10px;
+                vertical-align: super;
+                color: $primary-color;
+            }
+        }
+        .fr-box {
+            padding: 10px 0;
+        }
+        &.expanded {
+            min-height: 240px;
+            .fr-box {
+                margin-bottom: 66px;
+            }
+        }
+        .publish-message {
+            @include button;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 8px 16px;
+        }
+    }
+}

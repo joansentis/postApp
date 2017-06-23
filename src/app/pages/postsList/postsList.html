@@ -1,0 +1,7 @@
+<div class="posts-list-container">
+    <div class="posts-list-content">
+        <postBox (published)="publishPost($event)"></postBox>
+        <postCard [postContent]="postsArray" (commentPublished)="publishComment($event)"
+        (postDeleted)="deletePost($event)"></postCard>
+    </div>
+</div>
