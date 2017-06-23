@@ -8,6 +8,7 @@
         box-shadow: $post-shadow;
         padding: 0 1.2em;
         min-height: 140px;
+        transition: $default-transition;
         .user-info {
             padding: 10px 0 0;
             .user-img {

@@ -1,29 +1,31 @@
 <div class="post-card">
     <div class="post-container" *ngFor="let post of postContent; let i=index">
         <div class="user-info">
-            <i class="fa fa-user-circle user-img" aria-hidden="true"></i><span class="user-name">Name Surname</span>
+            <i class="fa fa-user-circle user-img" aria-hidden="true"></i>
+            <span class="user-name">Name Surname</span>
         </div>
         <div class="content" [innerHTML]="post.content"></div>
         <div class="comment-actions">
             <span (click)="showOpenBox(i)">Comment</span>
             <span class="separator"> · </span>
             <span (click)="deletePost(post.idReferal)">Delete</span>
-            <span class="separator"> · </span>            
+            <span class="separator"> · </span>
             <span>{{post.publishedAt | date: fullDate}}</span>
         </div>
-        <div class="comment" *ngIf="postSelected === i && openCommentBox">
+        <div class="comment" [@openCommentBox]='postSelected === i && state' [ngClass]="{'auto-height': postSelected === i && commentMessage}">
             <div [froalaEditor]="froalaConfig" [(froalaModel)]="commentMessage"></div>
             <div class="add-comment">
-                <button (click)="addComment(post, commentMessage)" *ngIf="openCommentBox">comment</button>
+                <button (click)="addComment(post, commentMessage)">comment</button>
             </div>
         </div>
         <div class="comments-list" *ngIf="post.comments.length > 0">
             <div class="comment-message" *ngFor="let comment of post.comments; let i=index">
                 <div class="user-info">
-                    <i class="fa fa-user-circle user-img" aria-hidden="true"></i><span class="user-name">Name Surname</span>
+                    <i class="fa fa-user-circle user-img" aria-hidden="true"></i>
+                    <span class="user-name">Name Surname</span>
                 </div>
                 <div [innerHTML]="comment.content"></div>
-                <div class="comment-actions">           
+                <div class="comment-actions">
                     <span>{{post.publishedAt | date: fullDate}}</span>
                 </div>
             </div>
