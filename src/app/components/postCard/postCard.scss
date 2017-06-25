@@ -44,10 +44,6 @@
             opacity: 0;
             transition: $default-transition;
             border-top: $separator;
-            &.auto-height {
-                min-height: 120px;
-                height: auto !important;
-            }
             .fr-box {
                 background: #fff;
                 padding: 1px 12px;

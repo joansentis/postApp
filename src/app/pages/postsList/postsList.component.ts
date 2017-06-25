@@ -13,7 +13,7 @@ export class postsListComponent implements OnInit {
 
     private postsArray: Array<Post> = [];
 
-    constructor(private appService: AppService) {}
+    constructor(private appService: AppService) { }
 
     ngOnInit() {
         this.getPostList();
@@ -41,15 +41,15 @@ export class postsListComponent implements OnInit {
         const id = date.getTime();
         const commentAux = new Comment(id, date, postObject.comment, postObject.post.idReferal);
         this.postsArray.map((post: any) => {
-            if(post.idReferal === postObject.post.idReferal) {
+            if (post.idReferal === postObject.post.idReferal) {
                 post.comments.push(commentAux);
-                this.appService.updatePost(post.idReferal, post).subscribe();                
+                this.appService.updatePost(post.idReferal, post).subscribe();
             }
         });
     }
 
     deletePost(idReferal) {
-        this.postsArray.map((post: any, index) => {                                                                             
+        this.postsArray.map((post: any, index) => {
             if (post.idReferal === idReferal) {
                 this.appService.deletePost(idReferal).subscribe();
                 this.postsArray.splice(index, 1);

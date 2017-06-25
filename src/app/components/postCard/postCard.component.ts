@@ -14,7 +14,8 @@ import { Post } from '../../models/post';
     animations: [
         trigger('openCommentBox', [
             state('show', style({
-                height: '120px',
+                height: 'auto',
+                minHeight: '120px',
                 visibility: 'visible',
                 opacity: '1'
             })),
