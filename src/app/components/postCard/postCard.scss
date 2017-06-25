@@ -2,6 +2,7 @@
 @import '../../mixins.scss';
 .post-card {
     @include container;
+    display: block;
     margin-top: 3em;
     .post-container {
         background: $white;
@@ -32,13 +33,21 @@
                 &:hover {
                     text-decoration: underline;
                 }
-            }            
+            }
         }
         .comment-message {
-            border-top: $separator;            
+            border-top: $separator;
         }
         .comment {
+            height: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: $default-transition;
             border-top: $separator;
+            &.auto-height {
+                min-height: 120px;
+                height: auto !important;
+            }
             .fr-box {
                 background: #fff;
                 padding: 1px 12px;
